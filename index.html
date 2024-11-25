@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | FAQ accordion</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-image: url(./assets/images/background-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        color: #fff;
+      }
+      h1 {
+        text-align: center;
+        margin: 2rem 0;
+        font-size: 2.5rem;
+      }
+      .accordion {
+        width: 90%;
+        max-width: 520px;
+        border-radius: 20px;
+        margin: 2rem auto ;
+        background-color: hsl(0, 33%, 98%);
+        padding: 40px;
+        margin-top: 100px;
+        
+      }
+      .accordion-item {
+            /* background-color: #fff; */
+            color: black;
+            margin: 1rem 0;
+            /* border-radius: 0.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25); */
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        .accordion-item-header {
+            padding: 0.5rem 3rem 0.5rem 1rem;
+            min-height: 3.5rem;
+            line-height: 1.25rem;
+            font-weight: bold;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            border-top: 1px solid gray;
+        }
+        .accordion-item-header:hover{
+            color: hsla(293, 98%, 22%, 0.863);
+        }
+        .accordion-item-header::after {
+            content: "\002B";
+            background-color: hsla(293, 98%, 22%, 0.863);
+            color: white ;
+            width: 25px;
+            height: 25px;
+            margin: 0px auto;
+            align-content: center;
+            text-align: center;
+            border-radius: 100%;
+            font-size: 2rem;
+            position: absolute;
+            right: 1rem;
+            transition: transform 0.2s ease-in-out;
+        }
+        .accordion-item-header.active::after {
+            content: "\2212"; 
+            background-color: hsl(292, 42%, 14%);
+            color: white;
+        }
+        .accordion-item-body {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 1rem;
+            line-height: 1.5rem;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        }
+        .accordion-item-body-content {
+            padding: 1rem 0;
+            margin-top: -15px;
+            margin-bottom: 0px;
+            color: hsl(0, 9%, 32%);
+            font-weight: 300;
+            line-height: 1.3;
+            font-size: 16px;
+        }
+        
+        /* .accordion-item-header1{
+            padding: 0.5rem 3rem 0.5rem 1rem;
+            min-height: 3.5rem;
+            line-height: 1.25rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+        }
+        .accordion-item-header1::after{
+            content: "\2212";
+            position: absolute;
+            right: 1rem;
+        } */
+        .text{
+            font-size: 34px;
+            font-family: 900;
+            color: hsl(292, 42%, 14%);
+        }
+        h4{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .img{
+            width: 25px;
+        }
+        #header{
+            border-top: none;
+        }
+  </style>
+</head>
+<body>
+  <div class="accordion">
+        <h4><img src="./assets/images/icon-star.svg" alt="" class="img"><span class="text">FAQs</span></h4>
+      
+      <div class="accordion-item">
+        <div class="accordion-item-header" id="header">
+          What is Frontend Mentor, and how will it help me?
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Frontend Mentor offers realistic coding challenges to help
+            developers improve their frontend coding skills with projects in
+            HTML, CSS, and JavaScript. It's suitable for all levels and ideal
+            for portfolio building.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-item-header">Is Frontend Mentor free?</div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Yes, Frontend Mentor offers both free and premium coding challenges,
+            with the free option providing access to a range of projects
+            suitable for all skill levels.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          Can I use Frontend Mentor projects in my portfolio?
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Yes, you can use projects completed on Frontend Mentor in your
+            portfolio. It's an excellent way to showcase your skills to
+            potential employers!
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          How can I get help if I'm stuck on a challenge?
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            The best place to get help is inside Frontend Mentor's Discord
+            community. There's a help channel where you can ask questions and
+            seek support from other community members.
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Victory Oguchiluru Obasi</a>.
+  </div>
+</body>
+<script>
+        const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+
+        accordionItemHeaders.forEach(header => {
+            header.addEventListener("click", () => {
+                // Close all other items
+                document.querySelectorAll(".accordion-item-header").forEach(otherHeader => {
+                    if (otherHeader !== header) {
+                        otherHeader.classList.remove("active");
+                        otherHeader.nextElementSibling.style.maxHeight = "0";
+                        otherHeader.nextElementSibling.style.padding = "0 1rem";
+                    }
+                });
+
+                // Toggle current item
+                header.classList.toggle("active");
+                const body = header.nextElementSibling;
+                if (header.classList.contains("active")) {
+                    body.style.maxHeight = body.scrollHeight + "px";
+                    body.style.padding = "1rem 1rem";
+                } else {
+                    body.style.maxHeight = "0";
+                    body.style.padding = "0 1rem";
+                }
+            });
+        });
+    </script>
+</html>
